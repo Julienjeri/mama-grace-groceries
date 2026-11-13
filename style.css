@@ -1,0 +1,518 @@
+
+/* Basic page styling */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8faf5;
+  color: #263528;
+}
+
+/* Website header */
+.site-header {
+  background-color: white;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  border-bottom: 2px solid #e2eadf;
+}
+
+/* Business name */
+.logo h1 {
+  color: #247342;
+  font-size: 24px;
+  margin: 0;
+}
+
+.logo p {
+  color: #687568;
+  margin: 6px 0 0;
+  font-size: 14px;
+}
+
+/* Navigation links */
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #263528;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #247342;
+}
+
+/* Delivery message */
+.delivery-note {
+  color: #247342;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Welcome banner */
+.hero {
+  background-color: #e8f3df;
+  padding: 70px 8%;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  margin: 25px;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.welcome-label {
+  color: #247342;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.hero h2 {
+  color: #1f512f;
+  font-size: 38px;
+  margin: 15px 0;
+}
+
+.hero-description {
+  color: #536354;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.shop-button {
+  display: inline-block;
+  background-color: #247342;
+  color: white;
+  padding: 13px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.shop-button:hover {
+  background-color: #195630;
+}
+
+/* Grocery categories */
+.categories {
+  padding: 40px 5%;
+  text-align: center;
+}
+
+.categories h2 {
+  color: #1f512f;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  color: #687568;
+  margin-bottom: 30px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.category-card {
+  background-color: white;
+  padding: 25px 15px;
+  border: 1px solid #e2eadf;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.category-icon {
+  font-size: 42px;
+}
+
+.category-card h3 {
+  color: #247342;
+  margin-bottom: 10px;
+}
+
+.category-card p {
+  color: #687568;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Adjust categories for smaller screens */
+@media (max-width: 700px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Product section */
+.products {
+  padding: 40px 5%;
+  text-align: center;
+}
+
+.products h2 {
+  color: #1f512f;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+/* Product grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 30px;
+}
+
+/* Individual product card */
+.product-card {
+  background-color: white;
+  border: 1px solid #e2eadf;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Product picture placeholder */
+
+.product-image {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #f0f6ec;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Product information */
+.product-card h3 {
+  color: #263528;
+  margin-bottom: 8px;
+}
+
+.product-unit {
+  color: #687568;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  color: #247342;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Add to cart button */
+.add-to-cart {
+  width: 100%;
+  padding: 12px;
+  background-color: #247342;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #195630;
+}
+
+/* Responsive product layout */
+@media (max-width: 700px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Shopping cart */
+.cart {
+  background-color: white;
+  margin: 25px 5%;
+  padding: 25px;
+  border: 1px solid #e2eadf;
+  border-radius: 12px;
+}
+
+.cart h2 {
+  color: #1f512f;
+}
+
+#cart-items {
+  padding-left: 20px;
+}
+
+#cart-items li {
+  margin: 12px 0;
+}
+
+.cart-total {
+  font-size: 20px;
+  font-weight: bold;
+  color: #247342;
+}
+
+#clear-cart {
+  padding: 10px 16px;
+  background-color: #eeeeee;
+  color: #263528;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ===== Mama Grace Groceries: Design Improvements ===== */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7faf5;
+  color: #26352a;
+  line-height: 1.6;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: #236b3b;
+}
+
+section {
+  padding: 24px;
+  margin: 24px auto;
+  max-width: 1100px;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border: 1px solid #dce8dc;
+  border-radius: 12px;
+  padding: 18px;
+  margin: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+button {
+  background-color: #287a42;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 16px;
+  margin: 4px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: #1c5b30;
+}
+
+input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  margin: 6px 0 18px;
+  border: 1px solid #b9cdbb;
+  border-radius: 7px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: 2px solid #287a42;
+  border-color: transparent;
+}
+
+#order-form {
+  background-color: #ffffff;
+  border: 1px solid #dce8dc;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+#customer-order-form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+#customer-order-form button {
+  width: 100%;
+  padding: 14px;
+  font-weight: bold;
+}
+
+#cart-items {
+  padding-left: 24px;
+}
+
+#cart-items li {
+  margin-bottom: 12px;
+}
+
+#cart-total {
+  font-weight: bold;
+  color: #236b3b;
+}
+
+/* Make the website comfortable to use on phones */
+@media (max-width: 600px) {
+  section {
+    padding: 16px;
+    margin: 14px auto;
+  }
+-
+  .product-card {
+    margin: 10px 0;
+  }
+
+  button {
+    padding: 10px 12px;
+  }
+}
+
+/* Arrange grocery products in a responsive grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* Make product cards fill their grid cells */
+.product-grid .product-card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Keep product buttons aligned at the bottom */
+.product-grid .product-card .add-to-cart {
+  margin-top: auto;
+}
+
+/* Two columns on tablets and smaller screens */
+@media (max-width: 800px) {
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+
+/* One column on narrow phones */
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Style the shop location section */
+#shop-location {
+  background-color: #ffffff;
+  border: 1px solid #dce8dc;
+  border-radius: 14px;
+  padding: 24px;
+  margin: 24px auto;
+  max-width: 1100px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+#shop-location a {
+  display: inline-block;
+  background-color: #287a42;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+#shop-location a:hover {
+  background-color: #1c5b30;
+}
+
+/* Welcome section */
+#welcome {
+  text-align: center;
+  background-color: #edf6ed;
+  padding: 30px 20px;
+  margin: 20px auto;
+  max-width: 1100px;
+  border-radius: 14px;
+}
+
+#welcome h1 {
+  color: #236b3b;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+#welcome p {
+  color: #26352a;
+  font-size: 17px;
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+@media (max-width: 600px) {
+  #welcome h1 {
+    font-size: 25px;
+  }
+
+  #welcome p {
+    font-size: 16px;
+  }
+}
+
+
